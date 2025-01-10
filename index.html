@@ -13,13 +13,24 @@
     <main class="main">
       <section class="main-page">
         <div class="container">
-          <p>
-            <button class="button button_primary">Confirm</button>
-          </p>
+          <div class="main-page__header">
+            <div class="main-page__wallets">
+              <div class="main-page__wallets-current">Wallet #1</div>
 
-          <p>
-            <button class="button button_secondary">No</button>
-          </p>
+              <ul class="main-page__wallets-menu">
+                <li class="main-page__wallets-menu-item">
+                  <div class="main-page__wallets-menu-wallet active">
+                    <span class="main-page__wallets-menu-wallet-name">Wallet #1</span>
+                  </div>
+                </li>
+                <li class="main-page__wallets-menu-item">
+                  <button class="main-page__wallets-menu-add">
+                    <span class="main-page__wallets-menu-add-text">Add new wallet</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     </main>
