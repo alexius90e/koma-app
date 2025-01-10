@@ -248,6 +248,7 @@ img {
   color: #fff;
   border-radius: 8px;
   background-color: #1e1e1e;
+  outline: none;
 }
 .main-page__login-button::before {
   content: "";
@@ -256,4 +257,106 @@ img {
   width: 14px;
   aspect-ratio: 1/1;
   background: url(../assets/icons/logo-x.svg) center/cover no-repeat;
+}
+.main-page__info {
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  background: linear-gradient(141deg, #6ec823 4.54%, #08870c 100%);
+}
+.main-page__info-connect-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 50px 16px;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 28px;
+  color: #fff;
+  border: none;
+  background-color: rgba(110, 200, 35, 0);
+  outline: none;
+  cursor: pointer;
+}
+.active .main-page__info-connect-button {
+  display: none;
+}
+.main-page__info-connect-button::after {
+  content: "";
+  display: block;
+  flex: 0 0 auto;
+  width: 24px;
+  aspect-ratio: 1/1;
+  background: url(../assets/icons/arrow_circle_up.svg) center/cover no-repeat;
+}
+.main-page__info-wallet {
+  display: none;
+  padding: 16px;
+}
+.active .main-page__info-wallet {
+  display: block;
+}
+.main-page__info-wallet-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin: 0 0 10px;
+}
+.main-page__info-wallet-id {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 6px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+.main-page__info-wallet-id::after {
+  content: "";
+  display: block;
+  flex: 0 0 auto;
+  width: 16px;
+  aspect-ratio: 1/1;
+  background: url(../assets/icons/copy.svg) center/cover no-repeat;
+}
+.main-page__info-wallet-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 6px;
+  background-color: #5dbd20;
+  outline: none;
+  cursor: pointer;
+}
+.main-page__info-wallet-more::before {
+  content: "";
+  display: block;
+  flex: 0 0 auto;
+  height: 16px;
+  width: 4px;
+  background: url(../assets/icons/more.svg) center/cover no-repeat;
+}
+.main-page__info-wallet-coins {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 128%;
+  color: #fff;
+}
+.main-page__info-wallet-balance {
+  font-weight: 600;
+  font-size: 14px;
+  color: #a3ff57;
 }
