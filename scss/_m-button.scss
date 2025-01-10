@@ -1,3 +1,39 @@
 .button {
-  
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  cursor: pointer;
+
+  &_primary {
+    background-color: #5dbd20;
+
+    &:hover {
+      background-color: #08870c;
+    }
+
+    &:active {
+      background-color: #0a9e0f;
+    }
+  }
+
+  &_secondary {
+    background-color: #2a2a2a;
+
+    &:hover {
+      background-color: #222222;
+    }
+
+    &:active {
+      background-color: #282828;
+    }
+  }
 }

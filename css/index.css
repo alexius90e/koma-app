@@ -32,7 +32,47 @@ img {
   height: auto;
 }
 
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+.button_primary {
+  background-color: #5dbd20;
+}
+.button_primary:hover {
+  background-color: #08870c;
+}
+.button_primary:active {
+  background-color: #0a9e0f;
+}
+.button_secondary {
+  background-color: #2a2a2a;
+}
+.button_secondary:hover {
+  background-color: #222222;
+}
+.button_secondary:active {
+  background-color: #282828;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 576px;
+  padding: 0 20px;
+}
+
 .main {
   margin: 0 auto;
-  max-width: 768px;
+  max-width: 576px;
 }
