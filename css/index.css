@@ -92,6 +92,7 @@ img {
   right: 0;
   bottom: 0;
   z-index: 99;
+  cursor: pointer;
 }
 .main-page__wallets-current {
   display: flex;
@@ -101,13 +102,29 @@ img {
   font-weight: 600;
   font-size: 14px;
   color: #fff;
+  user-select: none;
+  cursor: pointer;
 }
 .main-page__wallets-current::before {
   content: "";
   display: block;
+  flex: 0 0 auto;
   width: 24px;
   aspect-ratio: 1/1;
   background: url(../assets/logo.svg) center/cover no-repeat;
+}
+.main-page__wallets-current::after {
+  content: "";
+  display: block;
+  flex: 0 0 auto;
+  width: 16px;
+  aspect-ratio: 1/1;
+  background: url(../assets/icons/dropdown-sm.svg) center/6px no-repeat;
+  transition: transform ease-in-out 0.2s;
+  will-change: transform;
+}
+.active .main-page__wallets-current::after {
+  transform: rotate(180deg);
 }
 .main-page__wallets-menu {
   position: absolute;
@@ -120,6 +137,7 @@ img {
   margin: 0;
   list-style-type: none;
   box-sizing: border-box;
+  overflow: hidden;
   border-radius: 8px;
   backdrop-filter: blur(30px);
   background: rgba(30, 30, 30, 0.9);
@@ -135,6 +153,11 @@ img {
 .main-page__wallets-menu-item {
   padding: 6px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color ease-in-out 0.2s;
+  will-change: background-color;
+}
+.main-page__wallets-menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.02);
 }
 .main-page__wallets-menu-item:last-child {
   border: none;
@@ -152,9 +175,17 @@ img {
 .main-page__wallets-menu-wallet::before, .main-page__wallets-menu-add::before {
   content: "";
   display: block;
+  flex: 0 0 auto;
   width: 24px;
   aspect-ratio: 1/1;
   background: url(../assets/logo.svg) center/cover no-repeat;
+}
+.main-page__wallets-menu-wallet::after, .main-page__wallets-menu-add::after {
+  content: "";
+  display: block;
+  flex: 0 0 auto;
+  width: 16px;
+  aspect-ratio: 1/1;
 }
 .main-page__wallets-menu-wallet {
   font-weight: 600;
@@ -164,8 +195,15 @@ img {
 .main-page__wallets-menu-wallet.active {
   color: #6a6a6a;
 }
+.main-page__wallets-menu-wallet.active::after {
+  background: url(../assets/icons/check.svg) center/cover no-repeat;
+}
 .main-page__wallets-menu-wallet-name {
   flex: 1 1 auto;
+  max-width: calc(100% - 50px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   pointer-events: none;
 }
 .main-page__wallets-menu-add {
@@ -176,7 +214,14 @@ img {
   text-align: left;
   background-color: rgba(0, 0, 0, 0);
 }
+.main-page__wallets-menu-add::after {
+  background: url(../assets/icons/add_plus_circle.svg) center/cover no-repeat;
+}
 .main-page__wallets-menu-add-text {
   flex: 1 1 auto;
+  max-width: calc(100% - 50px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   pointer-events: none;
 }
