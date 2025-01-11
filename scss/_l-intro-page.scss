@@ -13,25 +13,13 @@
     display: block;
     width: 280px;
     aspect-ratio: 1 / 1;
-    margin: 0 auto;
-
-    &::before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      background: url(../assets/circles.svg) center / cover no-repeat;
-    }
+    margin: 0 auto 16px;
 
     &-image {
-      position: absolute;
-      top: 50%;
-      left: 50%;
       display: block;
       max-width: 100%;
-      width: 100px;
+      width: 280px;
       height: auto;
-      transform: translate3d(-50%, -50%, 0);
     }
   }
 
