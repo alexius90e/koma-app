@@ -47,9 +47,43 @@ const points = document.querySelectorAll('.points');
 
 points.forEach((pointsElem) => {
   pointsElem.addEventListener('click', (event) => {
-    const pointsModal = event.currentTarget.querySelector('.points__modal');
+    const pointsModal = event.currentTarget.querySelector('.points__modal > .modal');
     const isInfoBtn = event.target.classList.contains('points__info-button');
 
     if (isInfoBtn && pointsModal) openModal(pointsModal);
+  });
+});
+
+////
+
+const voteCardElems = document.querySelectorAll('.vote-page__card');
+
+function updateVoteCardPannel(panelElem) {
+  if (!panelElem) return;
+  if (panelElem.style.maxHeight) {
+    panelElem.style.maxHeight = null;
+  } else {
+    panelElem.style.maxHeight = panelElem.scrollHeight + 'px';
+  }
+}
+
+voteCardElems.forEach((voteCard) => {
+  const panel = voteCard.querySelector('.vote-page__card-panel');
+  if (panel && voteCard.classList.contains('active')) updateVoteCardPannel(panel);
+
+  voteCard.addEventListener('click', (event) => {
+    const isToggler = event.target.classList.contains('vote-page__card-toggler');
+    const isVoteBtn = event.target.classList.contains('vote-page__card-panel-vote-button');
+    const panel = event.currentTarget.querySelector('.vote-page__card-panel');
+    const modal = event.currentTarget.querySelector('.vote-page__card-modal .modal');
+
+    if (panel && isToggler) {
+      updateVoteCardPannel(panel);
+      event.currentTarget.classList.toggle('active');
+    }
+
+    if (modal && isVoteBtn) {
+      openModal(modal);
+    }
   });
 });

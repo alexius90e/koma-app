@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOMA APP</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script type="module" src="./js/index.js" defer></script>
+  </head>
+
+  <body>
+    <main class="main">
+      <nav class="main-nav">
+        <div class="container">
+          <div class="main-nav__menu">
+            <a class="main-nav__menu-link" href="#">
+              <img class="main-nav__menu-link-icon" src="./assets/icons/gamepad.svg" alt="icon" />
+            </a>
+            <a class="main-nav__menu-link" href="#">
+              <img class="main-nav__menu-link-icon" src="./assets/icons/handbag.svg" alt="icon" />
+            </a>
+            <a class="main-nav__menu-link active" href="#">
+              <img class="main-nav__menu-link-icon" src="./assets/icons/user.svg" alt="icon" />
+            </a>
+            <a class="main-nav__menu-link" href="#">
+              <img class="main-nav__menu-link-icon" src="./assets/icons/nft.svg" alt="icon" />
+            </a>
+            <a class="main-nav__menu-link" href="#">
+              <img class="main-nav__menu-link-icon" src="./assets/icons/globe.svg" alt="icon" />
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <section class="vote-page">
+        <div class="container">
+          <div class="points points_primary">
+            <figure class="points__icon">
+              <img class="points__icon-image" src="./assets/logo.svg" alt="logo" />
+            </figure>
+            <div class="points__title">KOMA Points</div>
+            <div class="points__value">50 000</div>
+            <div class="points__info">
+              <button class="points__info-button">?</button>
+            </div>
+
+            <div class="points__modal">
+              <div class="modal">
+                <div class="container">
+                  <div class="modal__body">
+                    <div class="modal__info">
+                      <div class="modal__info-title">What are Points?</div>
+                      <div class="modal__info-text">
+                        Crypto ipsum bitcoin ethereum dogecoin litecoin. Enjin bitcoin hive celsius
+                        harmony ren. Bancor aave cardano polygon vechain elrond uniswap harmony
+                        chiliz. TerraUSD decentraland nexo IOTA monero fantom. Elrond filecoin
+                        shiba-inu litecoin stellar stellar TRON cosmos polygon avalanche.
+                      </div>
+                    </div>
+
+                    <div class="modal__controls">
+                      <button class="button button_secondary modal__close">Understand</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="points points_secondary">
+            <figure class="points__icon">
+              <img class="points__icon-image" src="./assets/icons/wavy_check.svg" alt="logo" />
+            </figure>
+            <div class="points__title">Votes</div>
+            <div class="points__value">10</div>
+            <div class="points__info">
+              <button class="points__info-button">?</button>
+            </div>
+
+            <div class="points__modal"></div>
+          </div>
+
+          <div class="vote-page__info">
+            <h3 class="vote-page__info-title">Actual Votes:</h3>
+            <div class="vote-page__info-disclaimer">
+              <div class="vote-page__info-disclaimer-text">
+                To vote, you need have <b>1 votes</b>
+              </div>
+            </div>
+          </div>
+
+          <div class="vote-page__content">
+            <div class="vote-page__card">
+              <div class="vote-page__card-toggler">
+                <div class="vote-page__card-toggler-title">Marketing funds vote</div>
+                <div
+                  class="vote-page__card-toggler-status vote-page__card-toggler-status_active"
+                ></div>
+              </div>
+
+              <div class="vote-page__card-panel">
+                <div class="vote-page__card-panel-disclaimer">
+                  Here you can vote for the next CEX
+                </div>
+
+                <label class="vote-page__card-panel-item">
+                  <input class="vote-page__card-panel-item-input" type="checkbox" checked />
+                  <div class="vote-page__card-panel-item-name">Binance</div>
+                  <div class="vote-page__card-panel-item-points">10 000 Points</div>
+                </label>
+
+                <label class="vote-page__card-panel-item">
+                  <input class="vote-page__card-panel-item-input" type="checkbox" checked />
+                  <div class="vote-page__card-panel-item-name">Binance</div>
+                  <div class="vote-page__card-panel-item-points">10 000 Points</div>
+                </label>
+
+                <label class="vote-page__card-panel-item">
+                  <input class="vote-page__card-panel-item-input" type="checkbox" />
+                  <div class="vote-page__card-panel-item-name">Binance</div>
+                  <div class="vote-page__card-panel-item-points">10 000 Points</div>
+                </label>
+
+                <div class="vote-page__card-panel-vote">
+                  <button class="vote-page__card-panel-vote-button button button_primary">
+                    vote
+                  </button>
+                </div>
+              </div>
+
+              <div class="vote-page__card-modal">
+                <div class="modal">
+                  <div class="container">
+                    <div class="modal__body">
+                      <div class="modal__info">
+                        <div class="modal__info-title">Confirmation</div>
+                        <div class="modal__info-text modal__info-text_center">
+                          You well spend 15 000 KOMA POINTS for this vote, do you confirm?
+                        </div>
+                      </div>
+  
+                      <div class="modal__controls">
+                        <button class="button button_primary modal__close">Confirm</button>
+                        <button class="button button_secondary modal__close">No</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="vote-page__card active">
+              <div class="vote-page__card-toggler">
+                <div class="vote-page__card-toggler-title">Next CEX vote</div>
+                <div class="vote-page__card-toggler-status"></div>
+              </div>
+
+              <div class="vote-page__card-panel">
+                <div class="vote-page__card-panel-disclaimer">
+                  Here you can vote for the next CEX
+                </div>
+
+                <label class="vote-page__card-panel-item">
+                  <input class="vote-page__card-panel-item-input" type="checkbox" checked />
+                  <div class="vote-page__card-panel-item-name">Binance</div>
+                  <div class="vote-page__card-panel-item-points">10 000 Points</div>
+                </label>
+
+                <label class="vote-page__card-panel-item">
+                  <input class="vote-page__card-panel-item-input" type="checkbox" checked />
+                  <div class="vote-page__card-panel-item-name">Binance</div>
+                  <div class="vote-page__card-panel-item-points">10 000 Points</div>
+                </label>
+
+                <label class="vote-page__card-panel-item">
+                  <input class="vote-page__card-panel-item-input" type="checkbox" />
+                  <div class="vote-page__card-panel-item-name">Binance</div>
+                  <div class="vote-page__card-panel-item-points">10 000 Points</div>
+                </label>
+
+                <div class="vote-page__card-panel-vote">
+                  <button class="vote-page__card-panel-vote-button button button_primary">
+                    vote
+                  </button>
+                </div>
+              </div>
+
+              <div class="vote-page__card-modal">
+                <div class="modal">
+                  <div class="container">
+                    <div class="modal__body">
+                      <div class="modal__info">
+                        <div class="modal__info-title">Confirmation</div>
+                        <div class="modal__info-text modal__info-text_center">
+                          You well spend 15 000 KOMA POINTS for this vote, do you confirm?
+                        </div>
+                      </div>
+  
+                      <div class="modal__controls">
+                        <button class="button button_primary modal__close">Confirm</button>
+                        <button class="button button_secondary modal__close">No</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="vote-page__card">
+              <div class="vote-page__card-toggler">
+                <div class="vote-page__card-toggler-title">Marketing funds vote</div>
+                <div class="vote-page__card-toggler-status"></div>
+              </div>
+
+              <div class="vote-page__card-panel">
+                <div class="vote-page__card-panel-disclaimer">
+                  Here you can vote for the next CEX
+                </div>
+
+                <label class="vote-page__card-panel-item">
+                  <input class="vote-page__card-panel-item-input" type="checkbox" checked />
+                  <div class="vote-page__card-panel-item-name">Binance</div>
+                  <div class="vote-page__card-panel-item-points">10 000 Points</div>
+                </label>
+
+                <label class="vote-page__card-panel-item">
+                  <input class="vote-page__card-panel-item-input" type="checkbox" checked />
+                  <div class="vote-page__card-panel-item-name">Binance</div>
+                  <div class="vote-page__card-panel-item-points">10 000 Points</div>
+                </label>
+
+                <label class="vote-page__card-panel-item">
+                  <input class="vote-page__card-panel-item-input" type="checkbox" />
+                  <div class="vote-page__card-panel-item-name">Binance</div>
+                  <div class="vote-page__card-panel-item-points">10 000 Points</div>
+                </label>
+
+                <div class="vote-page__card-panel-vote">
+                  <button class="vote-page__card-panel-vote-button button button_primary">
+                    vote
+                  </button>
+                </div>
+              </div>
+
+              <div class="vote-page__card-modal">
+                <div class="modal">
+                  <div class="container">
+                    <div class="modal__body">
+                      <div class="modal__info">
+                        <div class="modal__info-title">Confirmation</div>
+                        <div class="modal__info-text modal__info-text_center">
+                          You well spend 15 000 KOMA POINTS for this vote, do you confirm?
+                        </div>
+                      </div>
+  
+                      <div class="modal__controls">
+                        <button class="button button_primary modal__close">Confirm</button>
+                        <button class="button button_secondary modal__close">No</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

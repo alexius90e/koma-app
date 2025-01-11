@@ -76,6 +76,7 @@ img {
 }
 
 .points {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -142,6 +143,18 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
+.points__modal {
+  display: none;
+}
+.points__modal:has(.modal) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1px;
+  height: 1px;
+}
+
 .main {
   margin: 0 auto;
   max-width: 576px;
@@ -466,6 +479,171 @@ img {
   object-fit: cover;
 }
 
+.vote-page {
+  min-height: 100dvh;
+  padding: 20px 0 98px;
+  box-sizing: border-box;
+}
+.vote-page__info {
+  margin: 20px 0 10px;
+  padding: 6px;
+}
+.vote-page__info-title {
+  margin: 0 0 6px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+.vote-page__info-disclaimer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background-color: #1751ff;
+}
+.vote-page__info-disclaimer::before {
+  content: "";
+  display: block;
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  background: url(../assets/icons/wavy_check.svg) center/cover no-repeat;
+}
+.vote-page__info-disclaimer-text {
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+}
+.vote-page__info-disclaimer-text b {
+  font-weight: 700;
+}
+.vote-page__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.vote-page__card {
+  padding: 11px 16px;
+  border-radius: 12px;
+  background-color: #1d1d1d;
+}
+.vote-page__card-toggler {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  cursor: pointer;
+}
+.vote-page__card-toggler > * {
+  pointer-events: none;
+}
+.vote-page__card-toggler::before {
+  content: "$";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #737d96;
+  border-radius: 100px;
+}
+.vote-page__card-toggler::after {
+  content: "";
+  display: block;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  background: url(../assets/icons/dropdown-sm.svg) center/10px no-repeat;
+  transition: transform ease-in-out 0.2s;
+}
+.vote-page__card-toggler-title {
+  flex: 1 1 auto;
+  overflow: hidden;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.vote-page__card-toggler-status {
+  display: block;
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #2e2e2e;
+}
+.vote-page__card-toggler-status_active {
+  background: url(../assets/icons/check-md.svg) center/8px no-repeat;
+  background-color: #5dbd20;
+}
+.vote-page__card.active .vote-page__card-toggler::after {
+  transform: rotate(180deg);
+}
+.vote-page__card-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height ease-in-out 0.2s;
+}
+.vote-page__card-panel-disclaimer {
+  padding-top: 10px;
+  margin: 0 0 10px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff;
+}
+.vote-page__card-panel-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 0 10px;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #2e2e2e;
+  cursor: pointer;
+}
+.vote-page__card-panel-item::before {
+  content: "";
+  display: block;
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 30px;
+  background-color: #686868;
+  transition-property: background-color, background-image;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+.vote-page__card-panel-item:has(input[type=checkbox]:checked)::before {
+  background: url(../assets/icons/dropdown-sm.svg) center/10px no-repeat;
+  background-color: #5dbd20;
+}
+.vote-page__card-panel-item-input {
+  display: none;
+}
+.vote-page__card-panel-item-name {
+  flex: 1 1 auto;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff;
+  user-select: none;
+}
+.vote-page__card-panel-item-points {
+  flex: 0 0 120px;
+  padding: 6px 10px;
+  font-weight: 400;
+  font-size: 10px;
+  color: #fff;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  background: #686868;
+  user-select: none;
+}
+
 .main-nav {
   position: fixed;
   left: 0;
@@ -541,8 +719,9 @@ img {
 .modal__info-title {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   font-weight: 700;
   font-size: 18px;
   color: #fff;
@@ -558,6 +737,9 @@ img {
   font-weight: 400;
   font-size: 16px;
   color: #fff;
+}
+.modal__info-text_center {
+  text-align: center;
 }
 .modal__controls {
   position: absolute;

@@ -1,0 +1,190 @@
+.vote-page {
+  min-height: 100dvh;
+  padding: 20px 0 98px;
+  box-sizing: border-box;
+
+  &__info {
+    margin: 20px 0 10px;
+    padding: 6px;
+
+    &-title {
+      margin: 0 0 6px;
+      font-weight: 700;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    &-disclaimer {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+      padding: 4px 8px;
+      border-radius: 8px;
+      background-color: #1751ff;
+
+      &::before {
+        content: '';
+        display: block;
+        flex: 0 0 auto;
+        width: 20px;
+        height: 20px;
+        background: url(../assets/icons/wavy_check.svg) center / cover no-repeat;
+      }
+
+      &-text {
+        font-weight: 400;
+        font-size: 14px;
+        color: #fff;
+
+        & b {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__card {
+    padding: 11px 16px;
+    border-radius: 12px;
+    background-color: #1d1d1d;
+
+    &-toggler {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      cursor: pointer;
+
+      & > * {
+        pointer-events: none;
+      }
+
+      &::before {
+        content: '$';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        width: 36px;
+        height: 36px;
+        border: 1px solid #737d96;
+        border-radius: 100px;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        flex: 0 0 auto;
+        width: 24px;
+        height: 24px;
+        background: url(../assets/icons/dropdown-sm.svg) center / 10px no-repeat;
+        transition: transform ease-in-out 0.2s;
+      }
+
+      &-title {
+        flex: 1 1 auto;
+        overflow: hidden;
+        font-weight: 700;
+        font-size: 14px;
+        color: #fff;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &-status {
+        display: block;
+        flex: 0 0 auto;
+        width: 16px;
+        height: 16px;
+        border-radius: 16px;
+        background-color: #2e2e2e;
+
+        &_active {
+          background: url(../assets/icons/check-md.svg) center / 8px no-repeat;
+          background-color: #5dbd20;
+        }
+      }
+    }
+
+    &.active &-toggler {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height ease-in-out 0.2s;
+
+      &-disclaimer {
+        padding-top: 10px;
+        margin: 0 0 10px;
+        font-weight: 400;
+        font-size: 12px;
+        color: #fff;
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 0 0 10px;
+        padding: 10px;
+        border-radius: 12px;
+        background-color: #2e2e2e;
+        cursor: pointer;
+
+        &::before {
+          content: '';
+          display: block;
+          flex: 0 0 auto;
+          width: 28px;
+          height: 28px;
+          border-radius: 30px;
+          background-color: #686868;
+          transition-property: background-color, background-image;
+          transition-timing-function: ease-in-out;
+          transition-duration: 0.2s;
+        }
+
+        &:has(input[type='checkbox']:checked)::before {
+          background: url(../assets/icons/dropdown-sm.svg) center / 10px no-repeat;
+          background-color: #5dbd20;
+        }
+
+        &-input {
+          display: none;
+        }
+
+        &-name {
+          flex: 1 1 auto;
+          font-weight: 400;
+          font-size: 12px;
+          color: #fff;
+          user-select: none;
+        }
+
+        &-points {
+          flex: 0 0 120px;
+          padding: 6px 10px;
+          font-weight: 400;
+          font-size: 10px;
+          color: #fff;
+          border: 1px solid #2a2a2a;
+          border-radius: 8px;
+          background: #686868;
+          user-select: none;
+        }
+      }
+    }
+  }
+}
