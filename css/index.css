@@ -887,12 +887,31 @@ img {
 }
 
 .intro-page__content {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100dvh;
   padding: 140px 0 90px;
   box-sizing: border-box;
+}
+.intro-page__content-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.intro-page__content-bg-image {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.intro-page__top, .intro-page__bottom {
+  position: relative;
+  z-index: 10;
 }
 .intro-page__logo {
   position: relative;
