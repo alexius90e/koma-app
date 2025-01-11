@@ -5,7 +5,7 @@
   bottom: 0;
   z-index: 100;
   backdrop-filter: blur(45px);
-  background: #161616;
+  background: rgba($color: #161616, $alpha: 0.85);
 
   &__menu {
     display: flex;
