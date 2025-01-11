@@ -1,0 +1,46 @@
+.notification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 20px;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    max-width: 196px;
+    width: 100%;
+    padding: 10px 24px;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 14px;
+    color: #ffffff;
+    border-radius: 12px;
+    background-color: #2e2e2e;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 18px;
+      width: 18px;
+      background: url(../assets/icons/wavy_check.svg) center / cover no-repeat;
+    }
+
+    &_success {
+      color: #60bf20;
+
+      &::before {
+        background-image: url(../assets/icons/wavy_success.svg);
+      }
+    }
+
+    &_warning {
+      color: #ff2e31;
+
+      &::before {
+        background-image: url(../assets/icons/wavy_warning.svg);
+      }
+    }
+  }
+}
