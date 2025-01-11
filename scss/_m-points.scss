@@ -1,0 +1,80 @@
+.points {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0 0 10px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background-color: #222222;
+
+  &_primary {
+    background-color: #ff5900;
+  }
+
+  &_secondary {
+    background-color: #1751ff;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 36px;
+    height: 36px;
+    border-radius: 34px;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      width: 23px;
+      height: auto;
+    }
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    max-width: calc(100% - 140px);
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__value {
+    flex: 1 0 auto;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    text-align: right;
+  }
+
+  &__info {
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      font-weight: 700;
+      font-size: 8px;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      outline: none;
+      background-color: rgba($color: #000000, $alpha: 0.2);
+      cursor: pointer;
+    }
+  }
+
+  &__modal {
+    position: fixed;
+  }
+}
