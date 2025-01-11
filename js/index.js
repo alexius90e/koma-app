@@ -87,3 +87,33 @@ voteCardElems.forEach((voteCard) => {
     }
   });
 });
+
+////
+
+const connectWalletElem = document.querySelector('.connect-wallet');
+const mainPageInfoConnectButton = document.querySelector('.main-page__info-connect-button');
+
+if (mainPageInfoConnectButton) {
+  mainPageInfoConnectButton.addEventListener('click', (event) => {
+    const modal = document.querySelector('.main-page__info-connect-modal .modal');
+    if (modal) openModal(modal);
+  });
+}
+
+if (connectWalletElem) {
+  connectWalletElem.addEventListener('click', (event) => {
+    const isNextButton = event.target.classList.contains('connect-wallet__buttons-next');
+    const isCheckButton = event.target.classList.contains('connect-wallet__buttons-check');
+    const stepElem = event.currentTarget.querySelector('.connect-wallet__title-step');
+
+    if (isNextButton) {
+      event.currentTarget.classList.add('active');
+      if (stepElem) stepElem.innerHTML = '2/2';
+    }
+
+    if (isCheckButton) {
+      const mainPageInfoElem = document.querySelector('.main-page__info');
+      if (mainPageInfoElem) mainPageInfoElem.classList.add('active');
+    }
+  });
+}
