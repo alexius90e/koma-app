@@ -468,3 +468,39 @@ img {
   height: 100%;
   object-fit: cover;
 }
+
+.main-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  backdrop-filter: blur(45px);
+  background: #161616;
+}
+.main-nav__menu {
+  display: flex;
+  padding: 0px 20px;
+}
+.main-nav__menu-link {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 1 auto;
+  height: 70px;
+  padding: 16px 8px;
+  box-sizing: border-box;
+  transition: background-color ease-in-out 0.2s;
+}
+.main-nav__menu-link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.main-nav__menu-link-icon {
+  display: block;
+  max-width: 100%;
+  width: 24px;
+  height: auto;
+}
+.main-nav__menu-link.active .main-nav__menu-link-icon {
+  filter: brightness(10);
+}

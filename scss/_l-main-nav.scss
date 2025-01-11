@@ -1,0 +1,40 @@
+.main-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  backdrop-filter: blur(45px);
+  background: #161616;
+
+  &__menu {
+    display: flex;
+    padding: 0px 20px;
+
+    &-link {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex: 1 1 auto;
+      height: 70px;
+      padding: 16px 8px;
+      box-sizing: border-box;
+      transition: background-color ease-in-out 0.2s;
+
+      &:hover {
+        background-color: rgba($color: #ffffff, $alpha: 0.05);
+      }
+
+      &-icon {
+        display: block;
+        max-width: 100%;
+        width: 24px;
+        height: auto;
+      }
+
+      &.active &-icon {
+        filter: brightness(10);
+      }
+    }
+  }
+}
