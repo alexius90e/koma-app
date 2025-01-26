@@ -1,0 +1,52 @@
+.intro-new {
+  & .container {
+    position: relative;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    &-image {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100dvh;
+    padding: 68px 0;
+    box-sizing: border-box;
+  }
+
+  &__progress {
+    position: relative;
+    display: block;
+    height: 16px;
+    width: calc(100% - 14px * 2);
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: #434f63;
+
+    &-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      border-radius: 16px;
+      background-color: #FEF509;
+    }
+  }
+}
