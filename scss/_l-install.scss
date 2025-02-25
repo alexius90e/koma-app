@@ -1,0 +1,114 @@
+.install {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 100dvh;
+    padding: 50px 0 60px;
+    box-sizing: border-box;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__brief {
+    border-radius: 16px;
+    background-color: #f1f1f4;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px;
+      border-bottom: 1px solid #dcdcdc;
+
+      &-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background-color: #ffad32;
+
+        &-image {
+          display: block;
+          max-width: 100%;
+          width: 36px;
+          height: auto;
+        }
+      }
+
+      &-text {
+        font-weight: 700;
+        font-size: 14px;
+        color: #000;
+      }
+    }
+
+    &-main {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 16px;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px;
+
+        &-text {
+          flex: 0 0 auto;
+          font-weight: 500;
+          font-size: 14px;
+          color: #000;
+        }
+
+        &-info {
+          display: flex;
+          align-items: center;
+          flex: 0 0 auto;
+          gap: 8px;
+          padding: 4px;
+          font-weight: 600;
+          font-size: 14px;
+          color: #000;
+          border-radius: 6px;
+          background-color: #e6e6eb;
+
+          &:has(.install__brief-main-item-info-text) {
+            padding: 4px 12px;
+          }
+
+          &-image {
+            display: block;
+            max-width: 100%;
+            width: 20px;
+            height: auto;
+          }
+        }
+      }
+
+      &-figure {
+        &-image  {
+          display: block;
+          max-width: 100%;
+          height: auto;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
