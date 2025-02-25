@@ -72,7 +72,6 @@ img {
 
 .container {
   margin: 0 auto;
-  max-width: 576px;
   max-width: 430px;
   padding: 0 20px;
   -webkit-box-sizing: border-box;
@@ -1528,4 +1527,74 @@ img {
   padding: 20px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0);
+}
+
+.connect .container {
+  position: relative;
+}
+.connect__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  min-height: 100dvh;
+  padding: 40px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.connect__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.connect__bg::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 500px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+.connect__bg-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.connect__content {
+  position: relative;
+  z-index: 2;
+}
+.connect__title {
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+}
+.connect__description {
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+}
+.connect__buttons .button {
+  background-color: #FF5900;
+}
+.connect__buttons .button:hover {
+  background-color: #e73600;
+}
+.connect__buttons .button:active {
+  background-color: #c53408;
 }
