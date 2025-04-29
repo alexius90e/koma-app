@@ -828,15 +828,19 @@ img {
   border-radius: 16px;
   overflow: hidden;
 }
+.main-page__nav-link_disabled {
+  pointer-events: none;
+}
 .main-page__nav-link-title {
   position: absolute;
   top: 15px;
   left: 15px;
+  z-index: 5;
   max-width: calc(100% - 30px);
   padding: 7px 12px;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 16px;
-  letter-spacing: -0.02em;
+  text-transform: uppercase;
   text-align: center;
   color: #fff;
   border-radius: 12px;
@@ -850,6 +854,10 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.main-page__nav-link_disabled .main-page__nav-link-image {
+  -webkit-filter: brightness(0.75);
+          filter: brightness(0.75);
 }
 
 .vote-page {
@@ -1075,6 +1083,58 @@ img {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+.vote-page__proposal {
+  margin: 16px 0 0;
+}
+.vote-page__proposal-title {
+  padding: 6px;
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+.vote-page__proposal-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.vote-page__proposal-form-textarea {
+  display: inline-block;
+  min-height: 110px;
+  width: 100%;
+  padding: 10px 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: #ffffff;
+  border: 1px solid #2e3033;
+  border-radius: 12px;
+  outline: none;
+  background-color: #1d1d1d;
+  resize: none;
+}
+.vote-page__proposal-form-textarea::-webkit-input-placeholder {
+  color: #616264;
+}
+.vote-page__proposal-form-textarea::-moz-placeholder {
+  color: #616264;
+}
+.vote-page__proposal-form-textarea:-ms-input-placeholder {
+  color: #616264;
+}
+.vote-page__proposal-form-textarea::-ms-input-placeholder {
+  color: #616264;
+}
+.vote-page__proposal-form-textarea::placeholder {
+  color: #616264;
 }
 
 .main-nav {

@@ -187,4 +187,44 @@
       }
     }
   }
+
+  &__proposal {
+    margin: 16px 0 0;
+
+    &-title {
+      padding: 6px;
+      margin: 0 0 10px;
+      font-weight: 700;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &-textarea {
+        display: inline-block;
+        min-height: 110px;
+        width: 100%;
+        padding: 10px 16px;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: #ffffff;
+        border: 1px solid #2e3033;
+        border-radius: 12px;
+        outline: none;
+        background-color: #1d1d1d;
+        resize: none;
+
+        &::placeholder {
+        color: #616264;
+
+        }
+      }
+    }
+  }
 }
